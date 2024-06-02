@@ -15,11 +15,9 @@ const GiphyProvider = ({ children }) => {
     if (fetchFavs) {
       setFavourits(fetchFavs);
     }
-    console.log(fetchFavs);
   }, []);
 
   const HandleFavourits = (gif) => {
-    console.log(gif);
     if (favourits.includes(gif)) {
       const updatedFavorites = favourits.filter((item) => item !== gif);
       localStorage.setItem("favourites", JSON.stringify(updatedFavorites));
